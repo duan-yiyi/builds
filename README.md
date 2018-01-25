@@ -35,3 +35,5 @@
 * eslint添加prettier
 * git push时候添加gitlab-ci或husky钩子
 * fetchClient中错误统一处理,需要提供弹框的UI
+
+test

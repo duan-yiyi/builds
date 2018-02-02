@@ -30,8 +30,17 @@
 * npm run pro: 构建生产包
 * npm run server：运行构建生成的服务端脚本
 
+## pwa
+* service worker cache
+
 ## todo
 
 * eslint添加prettier
 * git push时候添加gitlab-ci或husky钩子
 * fetchClient中错误统一处理,需要提供弹框的UI
+* 服务端加上gzip
+* pwa mainfest
+* pwa nnotification
+* pwa push
+* 数据接入数据库
+* 参考paw.js修改构建

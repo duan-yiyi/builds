@@ -9,7 +9,7 @@ const NO_VENDOR_LIST = ['react-hot-loader'];
 
 const ROOT_PATH = path.resolve(__dirname, '..');
 
-module.exports = merge(common, {
+module.exports = [merge(common, {
     entry: {
         app: './src/index.js',
         vendor: Object.keys(pkg.dependencies).filter(dep => NO_VENDOR_LIST.indexOf(dep) === -1)
@@ -25,4 +25,13 @@ module.exports = merge(common, {
         path: path.resolve(ROOT_PATH, 'dist'),
         publicPath: '/'
     }
-});
+}), {
+    entry: {
+        sw: './src/sw.js'
+    },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(ROOT_PATH, 'dist'),
+        publicPath: '/'
+    }
+}];
